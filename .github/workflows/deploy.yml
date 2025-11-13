@@ -28,7 +28,7 @@ jobs:
             -o ConnectTimeout=15 \
             -i ~/.ssh/vm_key \
             -p 2440 \
-            vboxuser@course.prafdin.ru "
+            roman@course.prafdin.ru "
           echo 'Creating necessary directories...'          
           
           echo 'Logging in to GHCR...'
