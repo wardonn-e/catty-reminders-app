@@ -18,15 +18,15 @@ jobs:
     - name: Setup SSH key
       run: |
         mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/vm_key
-        chmod 600 ~/.ssh/vm_key
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/github_actions
+        chmod 600 ~/.ssh/github_actions
         
     - name: Deploy with Docker Compose to VM
       run: |
         echo "Starting Docker Compose deployment..."
         ssh -o StrictHostKeyChecking=no \
             -o ConnectTimeout=15 \
-            -i ~/.ssh/vm_key \
+            -i ~/.ssh/github_actions \
             -p 2440 \
             roman@course.prafdin.ru "
           echo 'Creating necessary directories...'          
