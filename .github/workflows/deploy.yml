@@ -27,7 +27,7 @@ jobs:
         ssh -o StrictHostKeyChecking=no \
             -o ConnectTimeout=15 \
             -i ~/.ssh/github_actions \
-            -p 2440 \
+            -p 2444 \
             roman@course.prafdin.ru "
           echo 'Creating necessary directories...'          
           
