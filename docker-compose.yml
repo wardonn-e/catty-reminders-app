@@ -1,6 +1,6 @@
 services:
   app:
-    image: ghcr.io/sk1fix/catty-reminders:latest
+    image: ghcr.io/wardonn-e/catty-reminders:latest
     ports:
       - "8181:8181"
     depends_on:
@@ -10,7 +10,7 @@ services:
     restart: unless-stopped
 
   db:
-    image: mysql:8.0-oracle
+    image: mariadb:11
     environment:
       MYSQL_ROOT_PASSWORD: mypass
       MYSQL_DATABASE: catty_reminders
